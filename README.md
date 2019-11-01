@@ -43,7 +43,7 @@ $ # app is running on port 5000
 ## Resources
 
 - [Flask Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - Official Product Page
-- [Flask Dashboard Atlantis Dark](https://flask-dashboard-atlantis.appseed.us/) - Live DEMO
+- [Flask Dashboard Atlantis Dark](https://flask-dashboard-atlantis-dark.appseed.us/) - Live DEMO
 - [Flask Framework](https://palletsprojects.com/p/flask/) - official website
  
 <br />
