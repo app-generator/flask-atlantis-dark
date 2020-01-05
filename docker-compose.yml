@@ -1,0 +1,26 @@
+version: "3.7"
+services:
+    flask:
+        image: myappimage
+        container_name: myapp
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        entrypoint: flask run --host=0.0.0.0
+        ports:
+            - "5000:5000"
+        environment:
+            - FLASK_DEV=development
+        networks:
+            - appnet
+    
+    mongo:
+        image: mongo:4.0
+        container_name: mymongo
+        ports: 
+            - "27017:27017"
+        networks:
+            - appnet
+
+networks:
+    appnet:
