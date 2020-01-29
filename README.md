@@ -1,6 +1,8 @@
 # [Flask Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark)
 
-**[Open-Source Admin Dashboard](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark)** coded in **Flask Framework** on top of **Atlantis Dark Dashboard** design. **Features**:
+**Open-Source Admin Dashboard** coded in **[Flask Framework](https://palletsprojects.com/p/flask/)** - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+
+### Dashboard Features:
 
 <br />
 
@@ -82,4 +84,4 @@ $ # Access the app in browser: http://127.0.0.1:5000/
 <br />
 
 ---
-[Flask Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) provided by **AppSeed**
+[Flask Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
