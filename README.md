@@ -4,8 +4,7 @@
 
 ### Dashboard Features:
 
-<br />
-
+- UI-Ready, MIT License
 - SQLite database
 - SQLAlchemy ORM
 - Session-Based authentication flow (login, register)
