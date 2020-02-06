@@ -3,9 +3,8 @@
 
 {% block title %} Login {% endblock title %}
 
-{% block stylesheets %}
-
-{% endblock stylesheets %}
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
 
@@ -41,7 +40,11 @@
                             {% if msg %}
                                 <span class="text-danger">{{ msg | safe }}</span>
                             {% else %}
-                                <span>Login</span>
+                            <span>
+                                Use default credentials: test / pass
+                                <br />
+                                OR <a href="/register.html" >create your own user</a>
+                              </span>
                             {% endif %}
 
                         </div>
@@ -95,8 +98,5 @@
 
 {% endblock content %}
 
-{% block javascripts %}
-
-    <script src="/assets/js/setting-demo2.js"></script>
-
-{% endblock javascripts %}
+<!-- Specific JS goes HERE -->
+{% block javascripts %}{% endblock javascripts %}
