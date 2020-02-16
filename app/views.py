@@ -32,6 +32,10 @@ def logout():
 @app.route('/register.html', methods=['GET', 'POST'])
 def register():
     
+    # cut the page for authenticated users
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
+
     # declare the Registration Form
     form = RegisterForm(request.form)
 
@@ -77,6 +81,10 @@ def register():
 @app.route('/login.html', methods=['GET', 'POST'])
 def login():
     
+    # cut the page for authenticated users
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
+            
     # Declare the login form
     form = LoginForm(request.form)
 
