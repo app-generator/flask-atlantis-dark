@@ -1,14 +1,24 @@
 # [Flask Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark)
 
-**Open-Source Admin Dashboard** coded in **[Flask Framework](https://palletsprojects.com/p/flask/)** - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+**Open-Source Admin Dashboard** coded in **[Flask Framework](https://palletsprojects.com/p/flask/)** on top of **Atlantis Dark Dashboard** design (free version) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
 
 ### Dashboard Features:
 
-- UI-Ready, MIT License
-- SQLite database
+- UI-Ready, SQLite database
 - SQLAlchemy ORM
 - Session-Based authentication flow (login, register)
-- UI Kit: [Dashboard Alantis](https://github.com/app-generator/fork-dashboard-atlantis-dark-html) by **Themekita**
+- Forms validation
+- UI Kit: **[Atlantis Dark Dashboard](https://flask-dashboard-atlantis-dark.appseed.us/login)** (Free version) provided by **ThemeKita**
+- **MIT License**
+- Support: Free support via **Github** and (Paid) **24/7 LIVE Support** via [Discord](https://discord.gg/fZC6hup)
+
+<br />
+
+## Dashboard Links
+
+- [Flask Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - Product page
+- [Flask Dashboard Atlantis Dark](https://docs.appseed.us/admin-dashboards/flask-dashboard-atlantis-dark/) - Documentation
+- [Flask Dashboard Atlantis Dark](https://flask-dashboard-atlantis-dark.appseed.us/login.html) - LIVE Demo
 
 <br />
 
@@ -144,20 +154,25 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 
 <br />
 
-## Support
-
-- Free support via eMail < [support @ appseed.us](https://appseed.us/support) > and **Github** issues tracker
-- 24/7 Live Support via [Discord](https://discord.gg/fZC6hup) for paid plans and commercial products.
+## Credits & Links
 
 <br />
 
-## Resources
+### [Flask Framework](https://www.palletsprojects.com/p/flask/)
 
-- [Flask Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - Product page
-- [Flask Dashboard Atlantis Dark](https://flask-dashboard-atlantis-dark.appseed.us/) - Live DEMO
-- [Flask Framework](https://www.palletsprojects.com/p/flask/) - The offcial website
-- [Flask Dashboard - Open-Source Boilerplates](https://dev.to/sm0ke/flask-dashboard-open-source-boilerplates-dkg) - A popular article published on Dev.to platform
-- [Flask Dashboard](https://admin-dashboards.com/tags/flask-dashboard) - Index provided by **Admin-Dashboards.com**
+[Flask](/what-is/flask) is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions.
+
+<br />
+
+### [What is dashboard](https://en.wikipedia.org/wiki/Dashboard_(business))
+
+In information technology, a **[dashboard](https://en.wikipedia.org/wiki/Dashboard_(business))** is a user interface that, somewhat resembling an automobile's dashboard, organizes and presents information in a way that is easy to read. However, a computer dashboard is more likely to be interactive than an automobile dashboard (unless it is also computer-based). To some extent, most graphical user interfaces (GUIs) resemble a dashboard - by [Techtarget](https://searchcio.techtarget.com/definition/dashboard)
+
+<br />
+
+### [Atlantis Dark Lite](https://www.themekita.com/atlantis-lite-bootstrap-dashboard.html)
+
+**Atlantis Dark Lite** is a free bootstrap 4 admin dashboard that is beautifully and elegantly designed to display various metrics, numbers or data visualization. Atlantis Dark Lite admin dashboard has 2 layouts, many plugins and UI components to help developers create dashboards quickly and effectively so they can save development time and also help users to make the right and fast decisions based on existing data.
 
 <br />
 
