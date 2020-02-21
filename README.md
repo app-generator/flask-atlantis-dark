@@ -22,14 +22,6 @@
 
 <br />
 
-## Dashboard Links
-
-- [Flask Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - the product page
-- [Flask Dashboard Atlantis Dark](https://flask-dashboard-atlantis-dark.appseed.us/login.html) - LIVE Demo
-- [Flask Dashboard Atlantis Dark](https://docs.appseed.us/admin-dashboards/flask-dashboard-atlantis-dark/) - documentation
-
-<br />
-
 ## Want more? Go PRO!
 
 PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Support** (via [Discord](https://discord.gg/fZC6hup))
