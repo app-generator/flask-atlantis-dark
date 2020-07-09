@@ -1,4 +1,4 @@
-# [Flask Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark)
+# [Flask Dashboard - Atlantis Dark Design](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark)
 
 > **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - Features:
 
@@ -13,11 +13,11 @@
 
  > Links
  
-- [Flask Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - Product page
-- [Flask Dashboard Atlantis Dark](https://docs.appseed.us/admin-dashboards/flask-dashboard-atlantis-dark/) - Documentation
-- [Flask Dashboard Atlantis Dark](https://flask-dashboard-atlantis-dark.appseed.us/login.html) - LIVE Demo
-- More [Flask Admin Dashboards](https://appseed.us/admin-dashboards/flask) - index hosted by **AppSeed**
-- [Free Admin Dashboards](https://appseed.us/admin-dashboards/open-source) - index hosted by **AppSeed**
+- [Flask Dashboard - Atlantis Dark Design](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - Product page
+- [Flask Dashboard Atlantis Dark Docs](https://docs.appseed.us/admin-dashboards/flask-dashboard-atlantis-dark/) - Documentation
+- [Flask Dashboard Atlantis Dark Demo](https://flask-dashboard-atlantis-dark.appseed.us/login.html) - LIVE App
+- More [Flask Dashboards](https://appseed.us/admin-dashboards/flask) - index hosted by **AppSeed**
+- More [Admin Dashboards](https://appseed.us/admin-dashboards) - index hosted by **AppSeed**
 
 <br />
 
@@ -168,4 +168,4 @@ A dashboard is a set of pages that are easy to read and offer information to the
 <br />
 
 ---
-[Flask Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+[Flask Dashboard - Atlantis Dark Design](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
