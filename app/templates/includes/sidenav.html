@@ -6,7 +6,6 @@
 				<div class="sidebar-content">
 
 					{% if current_user.is_authenticated %}
-
 						<div class="user">
 							<div class="avatar-sm float-left mr-2">
 								<img src="/static/assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
@@ -14,7 +13,7 @@
 							<div class="info">
 								<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 									<span>
-										{{ current_user.user }}
+										{{ current_user.user.user }}
 										<span class="user-level">
 											{{ current_user.email }}  
 										</span>
@@ -31,7 +30,7 @@
 											</a>
 										</li>
 										<li>
-											<a href={{ url_for('logout') }}>
+											<a href="{{ url_for('logout') }}" >
 												<span class="link-collapse">Logout</span>
 											</a>
 										</li>
@@ -49,7 +48,7 @@
 								<div class="collapse" id="dashboard">
 									<ul class="nav nav-collapse">
 										<li>
-											<a href="/index.html">
+											<a href="/">
 												<span class="sub-item">Dashboard 1</span>
 											</a>
 										</li>
@@ -234,7 +233,7 @@
 								</div>
 							</li>
 							<li class="nav-item">
-								<a href="widgets.html">
+								<a href="/widgets.html">
 									<i class="fas fa-desktop"></i>
 									<p>Widgets</p>
 									<span class="badge badge-success">4</span>
@@ -292,13 +291,22 @@
 								</div>
 							</li>
 							<li class="mx-4 mt-2">
-								<a href="https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark" 
+								<a  target="_blank"
+								    href="https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark-pro" 
 										class="btn btn-primary btn-block">
-										<span class="btn-label mr-2"> <i class="fa fa-rocket"></i> </span>See Product</a> 
+										<span class="btn-label mr-2"> <i class="fa fa-rocket"></i> </span>PRO Version</a> 
 							</li>
-						</ul>
-
-					{% endif %}
+						</ul>					
+					{% else %}
+						<ul class="nav nav-primary">
+							<li class="mx-4 mt-2">
+								<a  target="_blank"
+									href="https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark-pro" 
+										class="btn btn-primary btn-block">
+										<span class="btn-label mr-2"> <i class="fa fa-rocket"></i> </span>PRO Version</a> 
+							</li>
+						</ul>											
+					{% endif %}		
 
 				</div>
 			</div>

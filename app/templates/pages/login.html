@@ -42,8 +42,6 @@
                             {% else %}
                             <span>
                                 Use default credentials: test / pass
-                                <br />
-                                OR <a href="/register.html" >create your own user</a>
                               </span>
                             {% endif %}
 
@@ -86,7 +84,7 @@
                         <div class="card-action">
                             <button type="submit" class="btn btn-success">Submit</button>
                             &nbsp; &nbsp;
-                            <span>Not a member?</span> Please <a href="/register.html">Register</a>
+                            <span>Not a member?</span> Please <a href="{{ url_for('register') }}">Register</a>
                         </div>
 
                     </form>
