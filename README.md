@@ -1,8 +1,8 @@
-# [Flask Dashboard Atlantis](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark)
+# [Flask Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark)
 
 > Open-Source Flask Dashboard seed project provided by AppSeed on top of **Atlantis Lite** a modern and free Bootstrap 4 Template - Features:
 
-- UI Kit: **Atlantis Lite** (Lite Version) provided by **ThemeKita**
+- UI Kit: **Atlantis Lite** (Dark Version) provided by **ThemeKita**
 - DBMS: SQLite, PostgreSQL (production) 
 - DB Tools: SQLAlchemy ORM, Alembic (schema migrations)
 - Modular design with **Blueprints**
@@ -12,8 +12,8 @@
 
 > Links
 
-- [Flask Dashboard Atlantis](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - product page
-- [Flask Dashboard Atlantis - Demo](https://flask-dashboard-atlantis-dark.appseed.us/) - LIVE Deployment
+- [Flask Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - product page
+- [Flask Dashboard Atlantis Dark - Demo](https://flask-dashboard-atlantis-dark.appseed.us/) - LIVE Deployment
 - [Atlantis Lite - UI Documentation](https://atlantis-lite.appseed.us/)
 
 <br />
@@ -304,4 +304,4 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 <br />
 
 ---
-[Flask Dashboard Atlantis](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+[Flask Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
