@@ -1,23 +1,20 @@
-# [Flask Dashboard - Atlantis Dark Design](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark)
+# [Flask Dashboard Atlantis](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark)
 
-> **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - Features:
+> Open-Source Flask Dashboard seed project provided by AppSeed on top of **Atlantis Lite** a modern and free Bootstrap 4 Template - Features:
 
-- UI Kit: **[Atlantis Dark Lite](https://www.themekita.com/atlantis-lite-bootstrap-dashboard.html?ref=appseed)** (Free version) provided by **ThemeKita**
-- UI-Ready, SQLite database
-- SQLAlchemy ORM
-- Session-Based authentication flow (login, register)
-- Forms validation
-- **MIT License**
-- Free support via **Github** 
-- Paid Support **24/7 LIVE Support** via [Discord](https://discord.gg/fZC6hup)
+- UI Kit: **Atlantis Lite** (Lite Version) provided by **ThemeKita**
+- DBMS: SQLite, PostgreSQL (production) 
+- DB Tools: SQLAlchemy ORM, Alembic (schema migrations)
+- Modular design with **Blueprints**
+- Session-Based authentication (via **flask_login**), Forms validation
+- Deployment scripts: Docker, Gunicorn / Nginx, Heroku
+- Support via **Github** (issues tracker) and [Discord](https://discord.gg/fZC6hup).
 
- > Links
- 
-- [Flask Dashboard - Atlantis Dark Design](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - Product page
-- [Flask Dashboard Atlantis Dark Docs](https://docs.appseed.us/admin-dashboards/flask-dashboard-atlantis-dark/) - Documentation
-- [Flask Dashboard Atlantis Dark Demo](https://flask-dashboard-atlantis-dark.appseed.us/login.html) - LIVE App
-- More [Flask Dashboards](https://appseed.us/admin-dashboards/flask) - index hosted by **AppSeed**
-- More [Admin Dashboards](https://appseed.us/admin-dashboards) - index hosted by **AppSeed**
+> Links
+
+- [Flask Dashboard Atlantis](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - product page
+- [Flask Dashboard Atlantis - Demo](https://flask-dashboard-atlantis-dark.appseed.us/) - LIVE Deployment
+- [Atlantis Lite - UI Documentation](https://atlantis-lite.appseed.us/)
 
 <br />
 
@@ -25,21 +22,21 @@
 
 PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Support** (via [Discord](https://discord.gg/fZC6hup))
 
-| [Flask Gradient PRO](https://appseed.us/admin-dashboards/flask-dashboard-gradient-pro) | [Flask Dashboard Black PRO](https://appseed.us/admin-dashboards/flask-dashboard-black-pro) | [Flask Dashboard Argon PRO](https://appseed.us/admin-dashboards/flask-dashboard-argon-pro) |
+| [Flask AtlantisDark PRO](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark-pro) | [Flask Dashboard Black PRO](https://appseed.us/admin-dashboards/flask-dashboard-black-pro) | [Flask Dashboard Argon PRO](https://appseed.us/admin-dashboards/flask-dashboard-argon-pro) |
 | --- | --- | --- |
-| [![Flask Gradient PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-gradient-pro/master/media/flask-dashboard-gradient-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-gradient-pro) | [![Flask Dashboard Black PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-black-pro/master/media/flask-dashboard-black-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-black-pro) | [![Flask Dashboard Argon PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-argon-pro/master/media/flask-dashboard-argon-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-argon-pro)
+| [![Flask AtlantisDark PRO](https://github.com/app-generator/flask-dashboard-atlantis-dark-pro/blob/master/media/flask-dashboard-atlantis-dark-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark-pro) | [![Flask Dashboard Black PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-black-pro/master/media/flask-dashboard-black-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-black-pro) | [![Flask Dashboard Argon PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-argon-pro/master/media/flask-dashboard-argon-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-argon-pro)
 
 <br />
 <br />
 
-![Flask Dashboard Atlantis Dark - Starter project coded in Flask.](https://raw.githubusercontent.com/app-generator/flask-dashboard-atlantis-dark/master/media/flask-dashboard-atlantis-dark-screen.png)
+![Flask Dashboard Atlantis - Template project provided by AppSeed.](https://raw.githubusercontent.com/app-generator/flask-dashboard-atlantis/master/media/flask-dashboard-atlantis-intro.gif)
 
 <br />
 
-## Build from sources
+## How to use it
 
 ```bash
-$ # Clone the sources
+$ # Get the code
 $ git clone https://github.com/app-generator/flask-dashboard-atlantis-dark.git
 $ cd flask-dashboard-atlantis-dark
 $
@@ -50,9 +47,12 @@ $
 $ # Virtualenv modules installation (Windows based systems)
 $ # virtualenv env
 $ # .\env\Scripts\activate
-$ 
-$ # Install requirements
+$
+$ # Install modules - SQLite Database
 $ pip3 install -r requirements.txt
+$
+$ # OR with PostgreSQL connector
+$ # pip install -r requirements-pgsql.txt
 $
 $ # Set the FLASK_APP environment variable
 $ (Unix/Mac) export FLASK_APP=run.py
@@ -64,19 +64,135 @@ $ # (Unix/Mac) export FLASK_ENV=development
 $ # (Windows) set FLASK_ENV=development
 $ # (Powershell) $env:FLASK_ENV = "development"
 $
-$ # Run the application
+$ # Start the application (development mode)
 $ # --host=0.0.0.0 - expose the app on all network interfaces (default 127.0.0.1)
 $ # --port=5000    - specify the app port (default 5000)  
 $ flask run --host=0.0.0.0 --port=5000
 $
-$ # Access the app in browser: http://127.0.0.1:5000/
+$ # Access the dashboard in browser: http://127.0.0.1:5000/
+```
+
+> Note: To use the app, please access the registration page and create a new user. After authentication, the app will unlock the private pages.
+
+<br />
+
+## Code-base structure
+
+The project is coded using blueprints, app factory pattern, dual configuration profile (development and production) and an intuitive structure presented bellow:
+
+> Simplified version
+
+```bash
+< PROJECT ROOT >
+   |
+   |-- app/                      # Implements app logic
+   |    |-- base/                # Base Blueprint - handles the authentication
+   |    |-- home/                # Home Blueprint - serve UI Kit pages
+   |    |
+   |   __init__.py               # Initialize the app
+   |
+   |-- requirements.txt          # Development modules - SQLite storage
+   |-- requirements-mysql.txt    # Production modules  - Mysql DMBS
+   |-- requirements-pqsql.txt    # Production modules  - PostgreSql DMBS
+   |
+   |-- .env                      # Inject Configuration via Environment
+   |-- config.py                 # Set up the app
+   |-- run.py                    # Start the app - WSGI gateway
+   |
+   |-- ************************************************************************
+```
+
+<br />
+
+> The bootstrap flow
+
+- `run.py` loads the `.env` file
+- Initialize the app using the specified profile: *Debug* or *Production*
+  - If env.DEBUG is set to *True* the SQLite storage is used
+  - If env.DEBUG is set to *False* the specified DB driver is used (MySql, PostgreSQL)
+- Call the app factory method `create_app` defined in app/__init__.py
+- Redirect the guest users to Login page
+- Unlock the pages served by *home* blueprint for authenticated users
+
+<br />
+
+> App / Base Blueprint
+
+The *Base* blueprint handles the authentication (routes and forms) and assets management. The structure is presented below:
+
+```bash
+< PROJECT ROOT >
+   |
+   |-- app/
+   |    |-- home/                                # Home Blueprint - serve app pages (private area)
+   |    |-- base/                                # Base Blueprint - handles the authentication
+   |         |-- static/
+   |         |    |-- <css, JS, images>          # CSS files, Javascripts files
+   |         |
+   |         |-- templates/                      # Templates used to render pages
+   |              |
+   |              |-- includes/                  #
+   |              |    |-- navigation.html       # Top menu component
+   |              |    |-- sidebar.html          # Sidebar component
+   |              |    |-- footer.html           # App Footer
+   |              |    |-- scripts.html          # Scripts common to all pages
+   |              |
+   |              |-- layouts/                   # Master pages
+   |              |    |-- base-fullscreen.html  # Used by Authentication pages
+   |              |    |-- base.html             # Used by common pages
+   |              |
+   |              |-- accounts/                  # Authentication pages
+   |                   |-- login.html            # Login page
+   |                   |-- register.html         # Registration page
+   |
+   |-- requirements.txt                          # Development modules - SQLite storage
+   |-- requirements-mysql.txt                    # Production modules  - Mysql DMBS
+   |-- requirements-pqsql.txt                    # Production modules  - PostgreSql DMBS
+   |
+   |-- .env                                      # Inject Configuration via Environment
+   |-- config.py                                 # Set up the app
+   |-- run.py                                    # Start the app - WSGI gateway
+   |
+   |-- ************************************************************************
+```
+
+<br />
+
+> App / Home Blueprint
+
+The *Home* blueprint handles UI Kit pages for authenticated users. This is the private zone of the app - the structure is presented below:
+
+```bash
+< PROJECT ROOT >
+   |
+   |-- app/
+   |    |-- base/                     # Base Blueprint - handles the authentication
+   |    |-- home/                     # Home Blueprint - serve app pages (private area)
+   |         |
+   |         |-- templates/           # UI Kit Pages
+   |              |
+   |              |-- index.html      # Default page
+   |              |-- page-404.html   # Error 404 - mandatory page
+   |              |-- page-500.html   # Error 500 - mandatory page
+   |              |-- page-403.html   # Error 403 - mandatory page
+   |              |-- *.html          # All other HTML pages
+   |
+   |-- requirements.txt               # Development modules - SQLite storage
+   |-- requirements-mysql.txt         # Production modules  - Mysql DMBS
+   |-- requirements-pqsql.txt         # Production modules  - PostgreSql DMBS
+   |
+   |-- .env                           # Inject Configuration via Environment
+   |-- config.py                      # Set up the app
+   |-- run.py                         # Start the app - WSGI gateway
+   |
+   |-- ************************************************************************
 ```
 
 <br />
 
 ## Deployment
 
-The app is provided with a basic configuration to be executed in [Docker](https://www.docker.com/), [Gunicorn](https://gunicorn.org/), and [Waitress](https://docs.pylonsproject.org/projects/waitress/en/stable/).
+The app is provided with a basic configuration to be executed in [Docker](https://www.docker.com/), [Heroku](https://www.heroku.com/), [Gunicorn](https://gunicorn.org/), and [Waitress](https://docs.pylonsproject.org/projects/waitress/en/stable/).
 
 <br />
 
@@ -102,6 +218,41 @@ Visit `http://localhost:5005` in your browser. The app should be up & running.
 
 <br />
 
+### [Heroku](https://www.heroku.com/)
+---
+
+Steps to deploy on **Heroku**
+
+- [Create a FREE account](https://signup.heroku.com/) on Heroku platform
+- [Install the Heroku CLI](https://devcenter.heroku.com/articles/getting-started-with-python#set-up) that match your OS: Mac, Unix or Windows
+- Open a terminal window and authenticate via `heroku login` command
+- Clone the sources and push the project for LIVE deployment
+
+```bash
+$ # Clone the source code:
+$ git clone https://github.com/app-generator/flask-dashboard-atlantis-dark.git
+$ cd flask-dashboard-atlantis-dark
+$
+$ # Check Heroku CLI is installed
+$ heroku -v
+heroku/7.25.0 win32-x64 node-v12.13.0 # <-- All good
+$
+$ # Check Heroku CLI is installed
+$ heroku login
+$ # this commaond will open a browser window - click the login button (in browser)
+$
+$ # Create the Heroku project
+$ heroku create
+$
+$ # Trigger the LIVE deploy
+$ git push heroku master
+$
+$ # Open the LIVE app in browser
+$ heroku open
+```
+
+<br />
+
 ### [Gunicorn](https://gunicorn.org/)
 ---
 
@@ -120,7 +271,6 @@ Serving on http://localhost:8001
 ```
 
 Visit `http://localhost:8001` in your browser. The app should be up & running.
-
 
 <br />
 
@@ -147,25 +297,11 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 
 ## Credits & Links
 
-<br />
-
-### [Flask Framework](https://www.palletsprojects.com/p/flask/)
-
-[Flask](/what-is/flask) is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions.
-
-<br />
-
-### [What is a dashboard](https://en.wikipedia.org/wiki/Dashboard_(business))
-
-A dashboard is a set of pages that are easy to read and offer information to the user in real-time regarding his business. A dashboard usually consists of graphical representations of the current status and trends within an organization. Having a well-designed dashboard will give you the possibility to act and make informed decisions based on the data that your business provides - *definition provided by [Creative-Tim - Free Dashboard Templates](https://www.creative-tim.com/blog/web-design/free-dashboard-templates/?ref=appseed)*.
-
-<br />
-
-### [Atlantis Dark Lite](https://www.themekita.com/atlantis-lite-bootstrap-dashboard.html?ref=appseed)
-
-**Atlantis Dark Lite** is a free bootstrap 4 admin dashboard that is beautifully and elegantly designed to display various metrics, numbers or data visualization. Atlantis Dark Lite admin dashboard has 2 layouts, many plugins and UI components to help developers create dashboards quickly and effectively so they can save development time and also help users to make the right and fast decisions based on existing data.
+- [Flask Framework](https://www.palletsprojects.com/p/flask/) - The offcial website
+- [Boilerplate Code](https://appseed.us/boilerplate-code) - Index provided by **AppSeed**
+- [Boilerplate Code](https://github.com/app-generator/boilerplate-code) - Index published on Github
 
 <br />
 
 ---
-[Flask Dashboard - Atlantis Dark Design](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+[Flask Dashboard Atlantis](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
