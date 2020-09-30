@@ -39,7 +39,7 @@
                             <span class="text-danger">{{ msg | safe }}</span>
                         {% else %}
                         <span>
-                            Add your credentials
+                            Use default credentials: test / pass
                         </span>
                         {% endif %}
                     </div>
@@ -60,7 +60,7 @@
                                                 <i class="icon-user"></i>
                                             </span>
                                         </div>
-                                        {{ form.username(placeholder="Username", class="form-control") }}
+                                        <input class="form-control" placeholder="Username" type="text" name="username" value="test">
                                     </div>
                                 </div>
 
@@ -71,7 +71,7 @@
                                                 <i class="icon-lock"></i>
                                             </span>
                                         </div>
-                                        {{ form.password(placeholder="Password", class="form-control", type="password") }}
+                                        <input class="form-control" placeholder="Password" type="password" name="password" value="pass">
                                     </div>
                                 </div>
 
