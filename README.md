@@ -29,7 +29,7 @@ PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Suppo
 <br />
 <br />
 
-![Flask Dashboard Atlantis - Template project provided by AppSeed.](https://raw.githubusercontent.com/app-generator/flask-dashboard-atlantis/master/media/flask-dashboard-atlantis-intro.gif)
+![Flask Dashboard Atlantis - Template project provided by AppSeed.](https://raw.githubusercontent.com/app-generator/flask-dashboard-atlantis-dark/master/media/flask-dashboard-atlantis-dark-intro.gif)
 
 <br />
 
