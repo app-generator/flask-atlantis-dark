@@ -29,14 +29,14 @@ Atlantis Lite (Dark Design) is a free bootstrap 4 admin dashboard that is beauti
 
 PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Support** (via [Discord](https://discord.gg/fZC6hup))
 
-| [Flask AtlantisDark PRO](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark-pro) | [Flask Dashboard Black PRO](https://appseed.us/admin-dashboards/flask-dashboard-black-pro) | [Flask Dashboard Argon PRO](https://appseed.us/admin-dashboards/flask-dashboard-argon-pro) |
+| [Flask Datta PRO](https://appseed.us/admin-dashboards/flask-dashboard-dattaable-pro) | [Flask Material PRO](https://appseed.us/admin-dashboards/flask-dashboard-material-pro) | [Flask Volt PRO](https://appseed.us/admin-dashboards/flask-dashboard-volt-pro) |
 | --- | --- | --- |
-| [![Flask AtlantisDark PRO](https://github.com/app-generator/flask-dashboard-atlantis-dark-pro/blob/master/media/flask-dashboard-atlantis-dark-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark-pro) | [![Flask Dashboard Black PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-black-pro/master/media/flask-dashboard-black-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-black-pro) | [![Flask Dashboard Argon PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-argon-pro/master/media/flask-dashboard-argon-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-argon-pro)
+| [![Flask Datta PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-dattaable-pro/master/media/flask-dashboard-dattaable-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-dattaable-pro) | [![Flask Material PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-material-pro/master/media/flask-dashboard-material-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-material-pro) | [![Flask Volt PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-volt-pro/master/media/flask-dashboard-volt-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-volt-pro)
 
 <br />
 <br />
 
-![Flask Dashboard Atlantis - Template project provided by AppSeed.](https://raw.githubusercontent.com/app-generator/flask-dashboard-atlantis-dark/master/media/flask-dashboard-atlantis-dark-intro.gif)
+![Flask Dashboard Atlantis - Template project provided by AppSeed.](https://raw.githubusercontent.com/app-generator/flask-dashboard-atlantis-dark/master/media/flask-dashboard-atlantis-dark-screen.png)
 
 <br />
 
