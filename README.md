@@ -21,7 +21,7 @@ Atlantis Lite (Dark Design) is a free bootstrap 4 admin dashboard that is beauti
 
 - [Flask Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark) - product page
 - [Flask Dashboard Atlantis Dark - Demo](https://flask-dashboard-atlantis-dark.appseed.us/) - LIVE Deployment
-- [Atlantis Lite - UI Documentation](https://atlantis-lite.appseed.us/)
+- [Flask Tutorial](https://github.com/app-generator/tutorial-flask) - Getting started with Flask
 
 <br />
 
