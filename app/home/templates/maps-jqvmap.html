@@ -1,0 +1,67 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Maps {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+	<div class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card card-transparent">
+					<div class="card-header">
+						<h4 class="card-title text-center">
+							Vector Maps
+						</h4>
+						<p class="card-category text-center">
+							Looks great on any resolution. Made by our friends from <a href="https://www.10bestdesign.com/jqvmap/">jQuery Vector Maps</a>.
+						</p>
+					</div>
+					<div class="card-body">
+						<div class="col-md-10 ml-auto mr-auto">
+							<div class="mapcontainer">
+								<div id="map-example" class="vmap" style="height: 400px"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+	<!-- Atlantis DEMO methods, don't include it in your project! -->
+	<script src="/static/assets/js/setting-demo2.js"></script>
+	<script>
+		$('#map-example').vectorMap(
+		{
+			map: 'world_en',
+			backgroundColor: 'transparent',
+			borderColor: '#fff',
+			borderWidth: 2,
+			color: '#e4e4e4',
+			enableZoom: true,
+			hoverColor: '#35cd3a',
+			hoverOpacity: null,
+			normalizeFunction: 'linear',
+			scaleColors: ['#b6d6ff', '#005ace'],
+			selectedColor: '#35cd3a',
+			selectedRegions: ['ID', 'RU', 'US', 'AU'],
+			showTooltip: true,
+			onRegionClick: function(element, code, region)
+			{
+				return false;
+			},
+			onResize: function (element, width, height) {
+				console.log('Map Size: ' +  width + 'x' +  height);
+			},
+		});
+	</script>
+
+{% endblock javascripts %}

@@ -1,0 +1,91 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Login {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="page-inner">
+    <div class="page-header">
+        <h4 class="page-title">Login</h4>
+        <ul class="breadcrumbs">
+            <li class="nav-home">
+                <a href="#">
+                    <i class="flaticon-home"></i>
+                </a>
+            </li>
+            <li class="separator">
+                <i class="flaticon-right-arrow"></i>
+            </li>
+            <li class="nav-item">
+                <a href="#">Authentication</a>
+            </li>
+            <li class="separator">
+                <i class="flaticon-right-arrow"></i>
+            </li>
+            <li class="nav-item">
+                <a href="#">Login</a>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span>
+                            Add your credentials
+                        </span>
+                    </div>
+                </div>
+
+                <form method="post" action="#">
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="icon-user"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Username">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="icon-lock"></i>
+                                            </span>
+                                        </div>
+                                        <input type="password" class="form-control" placeholder="Password">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        &nbsp; &nbsp;
+                        <span>Not a member?</span> Please <a href="/register.html" >Register</a>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
