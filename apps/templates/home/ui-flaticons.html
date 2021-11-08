@@ -1,0 +1,66 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} FlatIcons {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+	<div class="content">
+		<div class="page-inner">
+			<div class="page-header">
+				<h4 class="page-title">Icons</h4>
+				<ul class="breadcrumbs">
+					<li class="nav-home">
+						<a href="#">
+							<i class="flaticon-home"></i>
+						</a>
+					</li>
+					<li class="separator">
+						<i class="flaticon-right-arrow"></i>
+					</li>
+					<li class="nav-item">
+						<a href="#">Base</a>
+					</li>
+					<li class="separator">
+						<i class="flaticon-right-arrow"></i>
+					</li>
+					<li class="nav-item">
+						<a href="#">Flaticons</a>
+					</li>
+				</ul>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Flaticons</div>
+							<div class="card-category">Flat Icons from <a class="link" href="https://www.flaticon.com/authors/smashicons">Smashicons</a></div>
+						</div>
+						<div class="card-body">
+							<div id="row-demo-icon" class="row">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+	<!-- Atlantis DEMO methods, don't include it in your project! -->
+	<script src="/static/assets/js/setting-demo2.js"></script>
+	<script >
+		var iconClass = ['flaticon-delivery-truck', 'flaticon-shopping-bag', 'flaticon-box-3', 'flaticon-box-2', 'flaticon-box-1', 'flaticon-laptop', 'flaticon-coffee-cup', 'flaticon-user-6', 'flaticon-user-5', 'flaticon-remove-user-1', 'flaticon-customer-support', 'flaticon-user-4', 'flaticon-user-3', 'flaticon-user-2', 'flaticon-remove-user', 'flaticon-add-user', 'flaticon-tea-cup', 'flaticon-pen', 'flaticon-desk', 'flaticon-ruler', 'flaticon-pencil', 'flaticon-analytics', 'flaticon-google-plus', 'flaticon-dribbble', 'flaticon-whatsapp', 'flaticon-twitter', 'flaticon-behance', 'flaticon-instagram', 'flaticon-android', 'flaticon-apple', 'flaticon-windows', 'flaticon-pinterest', 'flaticon-youtube', 'flaticon-paypal', 'flaticon-linkedin', 'flaticon-facebook', 'flaticon-lock-1', 'flaticon-lock', 'flaticon-profile-1', 'flaticon-profile', 'flaticon-user-1', 'flaticon-user', 'flaticon-users', 'flaticon-message', 'flaticon-placeholder-1', 'flaticon-location', 'flaticon-arrows-2', 'flaticon-technology-2', 'flaticon-multimedia-2', 'flaticon-multimedia-1', 'flaticon-close', 'flaticon-home', 'flaticon-circle', 'flaticon-arrow', 'flaticon-mark-1', 'flaticon-mark', 'flaticon-shapes-1', 'flaticon-search-2', 'flaticon-interface-7', 'flaticon-suitcase', 'flaticon-chain-1', 'flaticon-chain', 'flaticon-agenda-1', 'flaticon-interface-6', 'flaticon-calendar', 'flaticon-list', 'flaticon-file-1', 'flaticon-file', 'flaticon-interface-5', 'flaticon-folder', 'flaticon-stopwatch', 'flaticon-time', 'flaticon-clock-1', 'flaticon-search-1', 'flaticon-alarm-1', 'flaticon-alarm', 'flaticon-present', 'flaticon-layers-1', 'flaticon-settings', 'flaticon-attachment', 'flaticon-gestures', 'flaticon-tool', 'flaticon-interface-4', 'flaticon-interface-3', 'flaticon-agenda', 'flaticon-shapes', 'flaticon-symbol-1', 'flaticon-symbol', 'flaticon-interface-2', 'flaticon-layers', 'flaticon-clock', 'flaticon-web-1', 'flaticon-internet', 'flaticon-placeholder', 'flaticon-signs-3', 'flaticon-star-1', 'flaticon-web', 'flaticon-star', 'flaticon-like-1', 'flaticon-like', 'flaticon-cloud', 'flaticon-database', 'flaticon-technology-1', 'flaticon-idea', 'flaticon-search', 'flaticon-wifi', 'flaticon-hands-1', 'flaticon-hands', 'flaticon-bars-2', 'flaticon-arrows-1', 'flaticon-interface-1', 'flaticon-network', 'flaticon-share-1', 'flaticon-share', 'flaticon-bars-1', 'flaticon-cross-1', 'flaticon-line-1', 'flaticon-signs-2', 'flaticon-check', 'flaticon-technology', 'flaticon-bars', 'flaticon-cross', 'flaticon-add', 'flaticon-power', 'flaticon-signs-1', 'flaticon-round', 'flaticon-exclamation', 'flaticon-success', 'flaticon-error', 'flaticon-line', 'flaticon-plus', 'flaticon-interface', 'flaticon-signs', 'flaticon-play-button-1', 'flaticon-play-button', 'flaticon-music-player', 'flaticon-medical', 'flaticon-photo-camera', 'flaticon-picture', 'flaticon-multimedia', 'flaticon-game-controller', 'flaticon-imac', 'flaticon-paint-palette', 'flaticon-envelope-3', 'flaticon-envelope-2', 'flaticon-envelope-1', 'flaticon-envelope', 'flaticon-mailbox', 'flaticon-inbox', 'flaticon-chat-8', 'flaticon-chat-7', 'flaticon-chat-6', 'flaticon-chat-5', 'flaticon-chat-4', 'flaticon-chat-3', 'flaticon-chat-2', 'flaticon-chat-1', 'flaticon-chat', 'flaticon-archive', 'flaticon-diagram', 'flaticon-graph-2', 'flaticon-graph-1', 'flaticon-graph', 'flaticon-chart-pie', 'flaticon-presentation', 'flaticon-store', 'flaticon-coins', 'flaticon-credit-card-1', 'flaticon-credit-card', 'flaticon-cart-1', 'flaticon-cart', 'flaticon-price-tag', 'flaticon-box', 'flaticon-right-arrow-4', 'flaticon-left-arrow-4', 'flaticon-up-arrow-3', 'flaticon-download-1', 'flaticon-down-arrow-3', 'flaticon-up-arrow-2', 'flaticon-left-arrow-3', 'flaticon-right-arrow-3', 'flaticon-down-arrow-2', 'flaticon-arrows', 'flaticon-left-arrow-2', 'flaticon-right-arrow-2', 'flaticon-upward', 'flaticon-download', 'flaticon-back', 'flaticon-next', 'flaticon-up-arrow-1', 'flaticon-down-arrow-1', 'flaticon-left-arrow-1', 'flaticon-right-arrow-1', 'flaticon-up-arrow', 'flaticon-down-arrow', 'flaticon-left-arrow', 'flaticon-right-arrow', 'flaticon-expand', 'flaticon-repeat'
+		]; var rowDemoIcon = "#row-demo-icon";
+		for (i = 0; i < iconClass.length; i++){
+			$(rowDemoIcon).append('<div class="col-md-3"> <div class="demo-icon"> <div class="icon-preview"><i class="la ' + iconClass[i] + '"></i></div> <div class="icon-class">' + iconClass[i] + '</div> </div> </div>');
+		}
+	</script>
+
+{% endblock javascripts %}

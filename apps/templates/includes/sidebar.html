@@ -1,0 +1,312 @@
+		<!-- Sidebar -->
+		<div class="sidebar sidebar-style-2" data-background-color="dark2">			
+			<div class="sidebar-wrapper scrollbar scrollbar-inner">
+				<div class="sidebar-content">
+
+				{% if current_user.is_authenticated %}	
+					<div class="user">
+						<div class="avatar-sm float-left mr-2">
+							<img src="/static/assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
+						</div>
+						<div class="info">
+							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+								<span>
+									{{ current_user.username }}
+									<span class="user-level">
+										{{ current_user.email }}
+									</span>
+									<span class="caret"></span>
+								</span>
+							</a>
+							<div class="clearfix"></div>
+
+							<div class="collapse in" id="collapseExample">
+								<ul class="nav">
+									<li>
+										<a href="#profile">
+											<span class="link-collapse">My Profile</span>
+										</a>
+									</li>
+									<li>
+										<a href="{{ url_for('authentication_blueprint.logout') }}">
+											<span class="link-collapse">Logout</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<ul class="nav nav-primary">
+						<li class="nav-item {% if 'index' in segment %} active {% endif %}">
+							<a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
+								<i class="fas fa-home"></i>
+								<p>Dashboard</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse {% if 'index' in segment %} show {% endif %}" id="dashboard">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="/index.html">
+											<span class="sub-item">Dashboard</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-section">
+							<span class="sidebar-mini-icon">
+								<i class="fa fa-ellipsis-h"></i>
+							</span>
+							<h4 class="text-section">Components</h4>
+						</li>
+						<li class="nav-item {% if 'ui-' in segment %} active {% endif %}">
+							<a data-toggle="collapse" href="#base">
+								<i class="fas fa-layer-group"></i>
+								<p>Base</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse {% if 'ui-' in segment %} show {% endif %}" id="base">
+								<ul class="nav nav-collapse">
+									<li class="{% if 'ui-avatars' in segment %} active {% endif %}">
+										<a href="/ui-avatars.html">
+											<span class="sub-item">Avatars</span>
+										</a>
+									</li>
+									<li class="{% if 'ui-buttons' in segment %} active {% endif %}">
+										<a href="/ui-buttons.html">
+											<span class="sub-item">Buttons</span>
+										</a>
+									</li>
+									<li class="{% if 'ui-gridsystem' in segment %} active {% endif %}">
+										<a href="/ui-gridsystem.html">
+											<span class="sub-item">Grid System</span>
+										</a>
+									</li>
+									<li class="{% if 'ui-panels' in segment %} active {% endif %}">
+										<a href="/ui-panels.html">
+											<span class="sub-item">Panels</span>
+										</a>
+									</li>
+									<li class="{% if 'ui-notifications' in segment %} active {% endif %}">
+										<a href="/ui-notifications.html">
+											<span class="sub-item">Notifications</span>
+										</a>
+									</li>
+									<li class="{% if 'ui-sweetalert' in segment %} active {% endif %}">
+										<a href="/ui-sweetalert.html">
+											<span class="sub-item">Sweet Alert</span>
+										</a>
+									</li>
+									<li class="{% if 'ui-fontawesome' in segment %} active {% endif %}">
+										<a href="/ui-fontawesome.html">
+											<span class="sub-item">Font Awesome Icons</span>
+										</a>
+									</li>
+									<li class="{% if 'ui-simpleline' in segment %} active {% endif %}">
+										<a href="/ui-simpleline.html">
+											<span class="sub-item">Simple Line Icons</span>
+										</a>
+									</li>
+									<li class="{% if 'ui-flaticons' in segment %} active {% endif %}">
+										<a href="/ui-flaticons.html">
+											<span class="sub-item">Flaticons</span>
+										</a>
+									</li>
+									<li class="{% if 'ui-typography' in segment %} active {% endif %}">
+										<a href="/ui-typography.html">
+											<span class="sub-item">Typography</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item {% if 'layout' in segment %} active {% endif %}">
+							<a data-toggle="collapse" href="#sidebarLayouts">
+								<i class="fas fa-th-list"></i>
+								<p>Sidebar Layouts</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="sidebarLayouts">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="/layout-sidebar-style-1.html">
+											<span class="sub-item">Sidebar Style 1</span>
+										</a>
+									</li>
+									<li>
+										<a href="/layout-overlay-sidebar.html">
+											<span class="sub-item">Overlay Sidebar</span>
+										</a>
+									</li>
+									<li>
+										<a href="/layout-compact-sidebar.html">
+											<span class="sub-item">Compact Sidebar</span>
+										</a>
+									</li>
+									<li>
+										<a href="/layout-static-sidebar.html">
+											<span class="sub-item">Static Sidebar</span>
+										</a>
+									</li>
+									<li>
+										<a href="/layout-icon-menu.html">
+											<span class="sub-item">Icon Menu</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item {% if 'form' in segment %} active {% endif %}">
+							<a data-toggle="collapse" href="#forms">
+								<i class="fas fa-pen-square"></i>
+								<p>Forms</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse {% if 'forms' in segment %} show {% endif %}" id="forms">
+								<ul class="nav nav-collapse">
+									<li class="{% if 'forms' in segment %} active {% endif %}">
+										<a href="/forms.html">
+											<span class="sub-item">Basic Form</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item {% if 'tables' in segment %} active {% endif %}">
+							<a data-toggle="collapse" href="#tables">
+								<i class="fas fa-table"></i>
+								<p>Tables</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse {% if 'tables-' in segment %} show {% endif %}" id="tables">
+								<ul class="nav nav-collapse">
+									<li class="{% if 'tables-simple' in segment %} active {% endif %}">
+										<a href="/tables-simple.html">
+											<span class="sub-item">Basic Table</span>
+										</a>
+									</li>
+									<li class="{% if 'tables-data' in segment %} active {% endif %}">
+										<a href="/tables-data.html">
+											<span class="sub-item">Datatables</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item {% if 'maps' in segment %} active {% endif %}">
+							<a data-toggle="collapse" href="#maps">
+								<i class="fas fa-map-marker-alt"></i>
+								<p>Maps</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse {% if 'maps-' in segment %} show {% endif %}" id="maps">
+								<ul class="nav nav-collapse">
+									<li class="{% if 'maps-jqvmap' in segment %} active {% endif %}">
+										<a href="/maps-jqvmap.html">
+											<span class="sub-item">JQVMap</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item {% if 'charts' in segment %} active {% endif %}">
+							<a data-toggle="collapse" href="#charts">
+								<i class="far fa-chart-bar"></i>
+								<p>Charts</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse {% if 'charts' in segment %} show {% endif %}" id="charts">
+								<ul class="nav nav-collapse">
+									<li class="{% if 'charts.html' in segment %} active {% endif %}">
+										<a href="/charts.html">
+											<span class="sub-item">Chart Js</span>
+										</a>
+									</li>
+									<li class="{% if 'charts-sparkline' in segment %} active {% endif %}">
+										<a href="/charts-sparkline.html">
+											<span class="sub-item">Sparkline</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item {% if 'widgets' in segment %} active {% endif %}">
+							<a href="/widgets.html">
+								<i class="fas fa-desktop"></i>
+								<p>Widgets</p>
+								<span class="badge badge-success">4</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#submenu">
+								<i class="fas fa-bars"></i>
+								<p>Menu Levels</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="submenu">
+								<ul class="nav nav-collapse">
+									<li>
+										<a data-toggle="collapse" href="#subnav1">
+											<span class="sub-item">Level 1</span>
+											<span class="caret"></span>
+										</a>
+										<div class="collapse" id="subnav1">
+											<ul class="nav nav-collapse subnav">
+												<li>
+													<a href="#">
+														<span class="sub-item">Level 2</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span class="sub-item">Level 2</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a data-toggle="collapse" href="#subnav2">
+											<span class="sub-item">Level 1</span>
+											<span class="caret"></span>
+										</a>
+										<div class="collapse" id="subnav2">
+											<ul class="nav nav-collapse subnav">
+												<li>
+													<a href="#">
+														<span class="sub-item">Level 2</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="#">
+											<span class="sub-item">Level 1</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="mx-4 mt-2">
+                            <a target="_blank"
+                               href="https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark-pro" 
+                               class="btn btn-danger btn-block">
+                                <span class="btn-label mr-2"> <i class="fa fa-rocket"></i> </span>PRO Version</a> 
+						</li>
+					</ul>
+				{% else %}
+					<ul class="nav nav-primary">
+						<li class="mx-4 mt-2">
+                            <a target="_blank"
+                               href="https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark-pro" 
+                               class="btn btn-danger btn-block">
+                                <span class="btn-label mr-2"> <i class="fa fa-rocket"></i> </span>PRO Version</a> 
+						</li>
+					</ul>
+				{% endif %}	
+				</div>
+			</div>
+		</div>
+        <!-- End Sidebar -->
+        
