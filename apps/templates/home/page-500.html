@@ -1,0 +1,40 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} 500 Error {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+	<div class="content">
+		<div class="page-inner">
+			<div class="page-header">
+				<h4 class="page-title">Home</h4>
+				<ul class="breadcrumbs">
+					<li class="nav-home">
+						<a href="/">
+							<i class="flaticon-home"></i>
+						</a>
+					</li>
+					<li class="separator">
+						<i class="flaticon-right-arrow"></i>
+					</li>
+					<li class="nav-item">
+						<a href="#">Error 500</a>
+					</li>
+				</ul>
+			</div>
+			<div class="page-category">
+                <h2>Error 500</h2>
+                <h3 class="font-weight-light">
+                    Server error - Please contact support.
+                </h3>
+            </div>
+		</div>
+	</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
