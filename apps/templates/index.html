@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+ <body>
+    <style>.container-first {
+        display: flex;
+        flex-flow: column-reverse wrap;
+        align-content: flex-start;
+        width: auto;
+        height: 300px;
+        padding: 0px 0px 0px 20px;
+        background-color: blue;
+      border-top: 2px sold white;
+    }
+    input[type='number']{
+    width: 50px;
+} 
+button[type='submit']{
+    width: 100px;
+    height: 50px;
+} 
+    .red-item, .black-item, .zero-item {
+      box-sizing: border-box;
+      border: none;
+      border-left: 3px solid white;
+      border-top: 3px solid white;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        text-align: center;
+        width: 50px;
+        font-size: 30px;
+        color: white;
+    }
+    .zero-item {
+        background-color: green;
+      border-bottom: 3px solid white;
+        padding-top: 110px;
+        padding-bottom: 111px;
+    }
+    .red-item {
+        background-color: red;
+    }
+    
+    .black-item {
+        background-color: black;
+    }
+    
+    .column-item {
+        border: solid white;
+        background-color: green;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        text-align: center;
+        width: 50px;
+        font-size: 30px;
+        color: white;
+    }
+    
+    .container-second {
+        display: flex;
+        background-color: green;
+        width: auto;
+        height: 70px;
+        flex-flow: row wrap;
+        align-content: flex-start;
+        padding: 0px 0px 0px 72px;
+    
+    }
+    
+    .doz-item {
+        flex-basis: 220px;
+        border: solid white;
+        background-color: green;
+        padding-top: 15px;
+        padding-bottom: 30px;
+        text-align: center;
+        height: 20px;
+        font-size: 30px;
+        color: white;
+    }
+    
+    .container-third {
+        display: flex;
+        background-color: green;
+        width: auto;
+        height: 150px;
+        flex-flow: row wrap;
+        align-content: flex-start;
+        padding: 0px 0px 0px 72px;
+    }
+    
+    .outside-section {
+        flex-basis: 107px;
+        border: solid white;
+        background-color: green;
+        padding-top: 15px;
+        padding-bottom: 30px;
+        text-align: center;
+        height: 20px;
+        font-size: 30px;
+        color: white;
+    }
+    
+    .rhomb-red {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        border: solid white;
+        transform: rotate(45deg);
+    }
+    
+    .rhomb-black {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        border: solid white;
+        transform: rotate(45deg);
+    }
+    
+    .value {
+        transform: rotate(-90deg);
+    }</style>
+  <h6>Hello Plotly (but not Dash)</h6>
+  
+  <form action="{{BASE}}/runSimulation" method="post">
+    <h6>Enter number of simulations to run:</h6>
+    <input type="number" name="simulations" id="simulations" value="10">
+    <h6>Enter Starting Bankroll:</h6>
+    <span>$</span><input type="number" name="sbr" id="sbr" value="1000">
+    <div class="container-first">
+		<div class="zero-item">
+			<div class="value">0<input type="number" value="0" id="0" name="0"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">1<input type="number" value="0" id="1" name="1"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">2<input type="number" value="0" id="2" name="2"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">3<input type="number" value="0" id="3" name="3"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">4<input type="number" value="0" id="4" name="4"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">5<input type="number" value="0" id="5" name="5"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">6<input type="number" value="0" id="6" name="6"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">7<input type="number" value="0" id="7" name="7"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">8<input type="number" value="0" id="8" name="8"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">9<input type="number" value="0" id="9" name="9"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">10<input type="number" value="0" id="10" name="10"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">11<input type="number" value="0" id="11" name="11"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">12<input type="number" value="0" id="12" name="12"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">13<input type="number" value="0" id="13" name="13"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">14<input type="number" value="0" id="14" name="14"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">15<input type="number" value="0" id="15" name="15"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">16<input type="number" value="0" id="16" name="16"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">17<input type="number" value="0" id="17" name="17"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">18<input type="number" value="0" id="18" name="18"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">19<input type="number" value="0" id="19" name="19"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">20<input type="number" value="0" id="20" name="20"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">21<input type="number" value="0" id="21" name="21"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">22<input type="number" value="0" id="22" name="22"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">23<input type="number" value="0" id="23" name="23"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">24<input type="number" value="0" id="24" name="24"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">25<input type="number" value="0" id="25" name="25"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">26<input type="number" value="0" id="26" name="26"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">27<input type="number" value="0" id="27" name="27"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">28<input type="number" value="0" id="28" name="28"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">29<input type="number" value="0" id="29" name="29"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">30<input type="number" value="0" id="30" name="30"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">31<input type="number" value="0" id="31" name="31"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">32<input type="number" value="0" id="32" name="32"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">33<input type="number" value="0" id="33" name="33"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">34<input type="number" value="0" id="34" name="34"></div>
+		</div>
+		<div class="black-item">
+			<div class="value">35<input type="number" value="0" id="35" name="35"></div>
+		</div>
+		<div class="red-item">
+			<div class="value">36<input type="number" value="0" id="36" name="36"></div>
+		</div>
+		
+	</div>
+
+	<div class="container-third">
+		<div class="outside-section">
+			<div>1-18<input type="number" value="0" id="Low" name="Low"></div>
+		</div>
+		<div class="outside-section">
+			<div>EVEN<input type="number" value="0" id="Even" name="Even"></div>
+		</div>
+		<div class="outside-section">
+			<div><div class="rhomb-red"><input type="number" value="0" id="Red" name="Red"></div></div>
+		</div>
+		<div class="outside-section">
+			<div><div class="rhomb-black"><input type="number" value="0" id="Black" name="Black"></div></div>
+		</div>
+		<div class="outside-section">
+			<div>ODD<input type="number" value="0" id="Odd" name="Odd"></div>
+		</div>
+		<div class="outside-section">
+			<div>19-36<input type="number" value="0" id="High" name="High"></div>
+		</div>
+	</div>
+    <button type="submit" style="height: ;50pxheight: ;">Submit Dude</button>
+</form>
+</body>
+</html>
+  
+  <div id='chart' class='chart'”></div>
+</body>
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+<script type='text/javascript'>
+  var graphs = {{graphJSON | safe}};
+  Plotly.plot('chart',graphs,{});
+</script>
+</html>
