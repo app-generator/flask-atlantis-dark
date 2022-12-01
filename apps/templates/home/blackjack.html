@@ -1,0 +1,264 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+			
+	<div class="content">
+		<div class="panel-header bg-primary-gradient">
+			<div class="page-inner py-5">
+				<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+					<div>
+						<h2 class="text-white pb-2 fw-bold">Blackjack Simulator</h2>
+						<h5 class="text-white op-7 mb-2">Simulate thousands of hands in secconds!</h5>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="page-inner mt--5">
+			<div class="row mt--2">
+				<div class="col-md-6">
+					<div class="card full-height">
+						<div class="card-body">
+							<div class="card-title">Blackjack Backtest Inputs</div>
+
+							<div class="card-category">Enter the conditions for the simulator</div>
+							<div class="d-flex flex-wrap justify-content-around pb-2 pt-4">
+                                <form id="form" action='/simulate' method='post'>
+                                <button class="btn btn-success">Run Simulation</button>
+                                <div class="form-group">
+                                    <label for="bankroll">Starting Bankroll</label>
+                                    <div class="input-group mb-3">
+                                        
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        
+                                        <!--<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">-->
+                                        <input type="text" class="form-control" required="true" value="1000" id="bankroll" name="bankroll"><br>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bankroll">Base Bet</label>
+                                    <div class="input-group mb-3">
+                                        
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        
+                                        <!--<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">-->
+                                        <input type="text" class="form-control" required="true" value="100" id="betSize" name="betSize"><br>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bankroll">Number of Simulations</label>
+                                    <div class="input-group mb-3">
+                                        
+                                       
+                                        
+                                        <!--<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">-->
+                                        <input type="text" class="form-control" required="true" value="10" id="nSim" name="nSim"><br>
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bankroll">Max Games per Simulation</label>
+                                    <div class="input-group mb-3">
+                                        
+                                        
+                                        
+                                        <!--<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">-->
+                                        <input type="text" class="form-control" required="true" value="1000" id="nGame" name="nGame"><br>
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bankroll">Number of Decks</label>
+                                    <div class="input-group mb-3">
+                                        
+                                        
+                                        
+                                        <!--<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">-->
+                                        <input type="text" class="form-control" required="true" value="1000" id="nDecks" name="nDecks"><br>
+                                        
+                                    </div>
+                                </div>
+                                
+								<!--<label for="bankroll">Starting Bankroll</label>
+                                <input type="number" required="true" value="1000" id="bankroll" name="bankroll"><br>
+                                <label for="betSize">Base Bet $</label>
+                                <input type="number" required="true" value="100" id="betSize" name="betSize"><br>
+                                <label for="nSim">Number of Simulations</label>
+                                <input type="number" required="true" value="10" id="nSim" name="nSim"><br>
+                                <label for="nGame">Max Games per Simulation</label>
+                                <input type="number" required="true" value="1000" id="nGame" name="nGame"><br>
+                                <label for="nDecks">Number of Decks</label>
+                                <input type="number" required="true" value="1000" id="nDecks" name="nDecks"><br>-->
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card full-height">
+						<div class="card-body">
+							<div class="card-title">Strategy Settings</div>
+
+                            <div class="form-group">
+                                <label for="StratCard">Select Strategy Card To Modify</label>
+                                <select onfocus="renderTable()" onchange="renderTable()" class="form-control" id="StratCard">
+                                    <option value="Hard">Hard</option>
+                                    <option value="Soft">Soft</option>
+                                    <option value="Pair">Split</option>
+                                    
+                                </select>
+                            </div>
+                            <div>
+                                <h2>Key:</h2><br>
+                                <h5>H = Hit, S = Stay, D = Double,R = Surrender</h5>
+                                
+                                <h5>Y = Split, N = Don't Split</h5>
+                                
+                            </div>
+							<script>
+                                function renderTable(){
+                                let option=document.getElementById("StratCard").value;
+                                let keys=["Pair","Hard","Soft"];
+                                for (let i=0; i<keys.length;i++){
+                                    document.getElementById(keys[i]+"Table").style="display: none;";
+                                }
+                                document.getElementById(option+"Table").style = "";
+                                
+
+                                }
+                            </script>
+                            {% for key,value in tables.items() %}
+                            
+                            <div onloadstart="renderTable()" id="{{key}}Table" style="display: none;">
+                                {{value|safe}}
+                            </div>
+                            {% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+        </form>
+			<div class="row">
+				<div class="col-md-8">
+                    
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+	<!-- Atlantis DEMO methods, don't include it in your project! -->
+	<script src="/static/assets/js/setting-demo.js"></script>
+	<script src="/static/assets/js/demo.js"></script>
+
+	<script>
+		Circles.create({
+			id:'circles-1',
+			radius:45,
+			value:60,
+			maxValue:100,
+			width:7,
+			text: 5,
+			colors:['#f1f1f1', '#FF9E27'],
+			duration:400,
+			wrpClass:'circles-wrp',
+			textClass:'circles-text',
+			styleWrapper:true,
+			styleText:true
+		})
+
+		Circles.create({
+			id:'circles-2',
+			radius:45,
+			value:70,
+			maxValue:100,
+			width:7,
+			text: 36,
+			colors:['#f1f1f1', '#2BB930'],
+			duration:400,
+			wrpClass:'circles-wrp',
+			textClass:'circles-text',
+			styleWrapper:true,
+			styleText:true
+		})
+
+		Circles.create({
+			id:'circles-3',
+			radius:45,
+			value:40,
+			maxValue:100,
+			width:7,
+			text: 12,
+			colors:['#f1f1f1', '#F25961'],
+			duration:400,
+			wrpClass:'circles-wrp',
+			textClass:'circles-text',
+			styleWrapper:true,
+			styleText:true
+		})
+
+		var totalIncomeChart = document.getElementById('totalIncomeChart').getContext('2d');
+
+		var mytotalIncomeChart = new Chart(totalIncomeChart, {
+			type: 'bar',
+			data: {
+				labels: ["S", "M", "T", "W", "T", "F", "S", "S", "M", "T"],
+				datasets : [{
+					label: "Total Income",
+					backgroundColor: '#ff9e27',
+					borderColor: 'rgb(23, 125, 255)',
+					data: [6, 4, 9, 5, 4, 6, 4, 3, 8, 10],
+				}],
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				legend: {
+					display: false,
+				},
+				scales: {
+					yAxes: [{
+						ticks: {
+							display: false //this will remove only the label
+						},
+						gridLines : {
+							drawBorder: false,
+							display : false
+						}
+					}],
+					xAxes : [ {
+						gridLines : {
+							drawBorder: false,
+							display : false
+						}
+					}]
+				},
+			}
+		});
+
+		$('#lineChart').sparkline([105,103,123,100,95,105,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: '#ffa534',
+			fillColor: 'rgba(255, 165, 52, .14)'
+		});
+	</script>
+
+{% endblock javascripts %}
