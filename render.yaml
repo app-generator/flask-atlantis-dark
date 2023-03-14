@@ -11,3 +11,5 @@ services:
         generateValue: true
       - key: WEB_CONCURRENCY
         value: 4
+      - key: DEBUG
+        value: True
